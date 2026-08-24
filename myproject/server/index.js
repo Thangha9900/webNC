@@ -12,10 +12,10 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
+// dia chi URL
 app.get('/api/data', (req, res) => {
     res.json({
         message: 'Hello from the server! 123123123',
-        result: testFunc(3, 4)
-      
+  
     });
 });
