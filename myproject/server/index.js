@@ -14,7 +14,7 @@ app.listen(PORT, () => {
 
 app.get('/api/data', (req, res) => {
     res.json({
-        message: 'Hello from the server!',
+        message: 'Hello from the server! 123123123',
         result: testFunc(3, 4)
       
     });
