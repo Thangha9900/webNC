@@ -13,3 +13,7 @@ app.get('/api/data', (req, res) => {
         message: 'Hello from the server! 123123123',
     });
 });
+
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
