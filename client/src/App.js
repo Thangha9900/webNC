@@ -38,7 +38,7 @@ function App() {
         <ul>
           {students.map((student) => (
             <li key={student.SID || student.id || Math.random()}>
-              {student.SID} - {student.NAME || student.name || "Không có tên"}
+              {student.SID} - {student.SNAME || "Không có tên"}
             </li>
           ))}
         </ul>
