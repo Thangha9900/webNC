@@ -1,4 +1,12 @@
-import { Column, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import type { Relation } from 'typeorm';
 import { Monhoc } from './monhoc.entity.js';
 import { Sinhvien } from './sinhvien.entity.js';
 
@@ -12,13 +20,13 @@ export class Dangki {
     onDelete: 'CASCADE',
   })
   @JoinColumn({ name: 'sinh_vien_id' })
-  sinhVien: Sinhvien;
+  sinhVien: Relation<Sinhvien>;
 
   @ManyToOne(() => Monhoc, (monhoc) => monhoc.sinhVienDangKy, {
     onDelete: 'CASCADE',
   })
   @JoinColumn({ name: 'mon_hoc_id' })
-  monHoc: Monhoc;
+  monHoc: Relation<Monhoc>;
 
   @Column({ type: 'date', default: () => 'CURRENT_DATE' })
   ngàyDangKy: string;
